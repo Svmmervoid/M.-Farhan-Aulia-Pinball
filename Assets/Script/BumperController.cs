@@ -6,6 +6,13 @@ public class BumperController : MonoBehaviour
 {
     public Collider bola;
     public float multiplier;
+    public float score;
+
+    public AudioManager audioManager;
+    public VFXManager vfxManager;
+
+    // untuk mengakses score manager
+    public ScoreManager scoreManager;
 
     private Animator animator;
 
@@ -23,6 +30,15 @@ public class BumperController : MonoBehaviour
 
             //Animasi
             animator.SetTrigger("Hit");
+
+            //play SFX
+            audioManager.PlaySFX(collision.transform.position);
+
+            //play VFX
+            vfxManager.PlayVFX(collision.transform.position);
+
+            //tambah score saat menabrak bumper
+            scoreManager.AddScore(score);
         }
     }
 }

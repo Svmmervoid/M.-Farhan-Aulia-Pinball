@@ -106,8 +106,8 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
+  m_Height: 1.3
+  m_Direction: 2
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!114 &5671902912531796531
 MonoBehaviour:
@@ -123,6 +123,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bola: {fileID: 0}
   multiplier: 3
+  audioManager: {fileID: 0}
 --- !u!95 &316362998834660756
 Animator:
   serializedVersion: 5
